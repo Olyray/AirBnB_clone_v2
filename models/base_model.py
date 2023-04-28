@@ -37,7 +37,7 @@ class BaseModel:
             if '__class__' in kwargs:
                 del kwargs['__class__']
             for key, value in kwargs.items():
-                if not hasattr(self, key):
+                if not hasattr(self, key) or value is not None:
                     self.__dict__[key] = value
 
     def __str__(self):
