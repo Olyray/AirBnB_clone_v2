@@ -17,6 +17,7 @@ class State(BaseModel, Base):
         @property
         def cities(self):
             from models import storage
+            from models.city import City
             related_cities = []
             cities = storage.all(City)
             for city in cities.values():
