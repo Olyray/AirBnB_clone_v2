@@ -2,12 +2,12 @@
 """This module defines a Flask web application"""
 
 from flask import Flask, render_template, url_for
-import os
 from models import storage
 from models.state import State
 
 
 app = Flask(__name__)
+
 
 @app.teardown_appcontext
 def teardown_appcontext(exception):
