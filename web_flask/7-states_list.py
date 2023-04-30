@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-"""This module defines a Flask web application"""
-
+"""Starts a flask app
+    listens to 0.0.0.0:5000
+    
+"""
 from flask import Flask, render_template, url_for
 import os
 from models import storage
